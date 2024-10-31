@@ -50,35 +50,35 @@ reg [psum_bw-1:0] out23;
 reg [psum_bw-1:0] out2;
 reg [psum_bw-1:0] out3;
 
-mac0 #(.bw(bw), .psum_bw(psum_bw)) mac_instance (
+mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance0 (
         .a(x0), 
         .b(w0),
         .c(0),
 	.out(out0)
 ); 
 
-mac1 #(.bw(bw), .psum_bw(psum_bw)) mac_instance (
+mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance1 (
         .a(x1), 
         .b(w1),
         .c(out0),
 	.out(out1)
 ); 
 
-mac2 #(.bw(bw), .psum_bw(psum_bw)) mac_instance (
+mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance2 (
         .a(x2), 
         .b(w2),
         .c(out1),
 	.out(out2)
 ); 
 
-mac3 #(.bw(bw), .psum_bw(psum_bw)) mac_instance (
+mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance3 (
         .a(x3), 
         .b(w3),
         .c(out2),
 	.out(out3)
 ); 
 
-mac4 #(.bw(bw), .psum_bw(psum_bw)) mac_instance (
+mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance4 (
         .a(1), 
         .b(out3),
         .c(psum_in),
