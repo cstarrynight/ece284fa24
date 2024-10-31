@@ -1,6 +1,6 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-module adder (out, a, b);
+module full_adder (out, a, b);
 
 
 parameter psum_bw = 16;
