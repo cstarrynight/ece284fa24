@@ -40,6 +40,7 @@ reg  [bw-1:0] w3;
 reg [3:0]  w [3:0];
 reg [3:0]  x [3:0];
 reg  [psum_bw-1:0] psum_in;
+integer j; 
 
 function [3:0] w_bin ;
   input integer  weight ;
