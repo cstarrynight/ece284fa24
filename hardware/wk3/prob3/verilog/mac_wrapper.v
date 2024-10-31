@@ -34,9 +34,6 @@ input  [bw-1:0] w1;
 input  [bw-1:0] w2;
 input  [bw-1:0] w3;
 
-
-input [3:0]  w [3:0];
-input [3:0]  x [3:0];
 input [psum_bw-1:0] psum_in;
 integer j; 
 
@@ -49,6 +46,7 @@ wire [psum_bw-1:0] out1;
 wire [psum_bw-1:0] out23;
 wire [psum_bw-1:0] out2;
 wire [psum_bw-1:0] out3;
+wire [psum_bw-1:0] outf;
 
 mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance0 (
         .a(x0), 
@@ -78,21 +76,27 @@ mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance3 (
 	.out(out3)
 ); 
 
-adder #(.bw(bw), .psum_bw(psum_bw)) adder_instance1 (
+adder #(.psum_bw(psum_bw)) adder_instance1 (
         .a(out0), 
         .b(out1),
 	.out(out01)
 ); 
 
-adder #(.bw(bw), .psum_bw(psum_bw)) adder_instance2 (
+adder #(.psum_bw(psum_bw)) adder_instance2 (
         .a(out2), 
         .b(out3),
 	.out(out23)
 ); 
 
-adder #(.bw(bw), .psum_bw(psum_bw)) adder_instance3 (
+adder #(.psum_bw(psum_bw)) adder_instance3 (
         .a(out01), 
         .b(out23),
+	.out(outf)
+); 
+
+adder #(.psum_bw(psum_bw)) adder_instance4 (
+        .a(outf), 
+        .b(psum_in),
 	.out(out)
 ); 
 

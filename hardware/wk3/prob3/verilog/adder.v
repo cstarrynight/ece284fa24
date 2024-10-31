@@ -2,7 +2,7 @@
 // Please do not spread this code without permission 
 module adder (out, a, b);
 
-parameter bw = 4;
+
 parameter psum_bw = 16;
 
 //...
