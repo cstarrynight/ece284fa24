@@ -1,4 +1,5 @@
 ./verilog/mac.v
-./verilog/adder.v
+./verilog/half_adder.v
+./verilog/full_adder.v
 ./verilog/mac_tb.v
 ./verilog/mac_wrapper.v
