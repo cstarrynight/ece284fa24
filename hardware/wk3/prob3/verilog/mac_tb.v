@@ -170,7 +170,7 @@ initial begin
      w_scan_file = $fscanf(w_file, "%d\n", w_dec);
      x_scan_file = $fscanf(x_file, "%d\n", x_dec);
      x3 = x_bin(x_dec);
-     w0 = w_bin(w_dec);          
+     w3 = w_bin(w_dec);          
 
 
       x[0] = x0;
