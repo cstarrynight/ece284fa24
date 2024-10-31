@@ -12,7 +12,7 @@ input  signed [bw-1:0] c; //previous value of accumulation register
 
 output [8:0] out;
 
-assign out = {1b'0,a_q}*b + c;
+assign out = {1'b0,a_q}*b + c;
 
 //...
 endmodule
