@@ -81,18 +81,18 @@ mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance3 (
 adder #(.bw(bw), .psum_bw(psum_bw)) adder_instance1 (
         .a(out0), 
         .b(out1),
-	.out(out0)
+	.out(out01)
 ); 
 
 adder #(.bw(bw), .psum_bw(psum_bw)) adder_instance2 (
         .a(out2), 
         .b(out3),
-	.out(out1)
+	.out(out23)
 ); 
 
 adder #(.bw(bw), .psum_bw(psum_bw)) adder_instance3 (
-        .a(out0), 
-        .b(out1),
+        .a(out01), 
+        .b(out23),
 	.out(out)
 ); 
 
