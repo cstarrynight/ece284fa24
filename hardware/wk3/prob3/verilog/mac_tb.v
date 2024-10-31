@@ -156,8 +156,16 @@ initial begin
      x3 = x_bin(x_dec);
      w0 = w_bin(w_dec);          
 
-     reg x[3:0] = {x0,x1,x2,x3};
-     reg w[3:0] = {w0,w1,w2,w3};
+     reg [3:0]  x [bw-1:0];
+      x[0] = x0;
+      x[1] = x1;
+      x[2] = x2;
+      x[3] = x3;
+     reg [3:0]  w [bw-1:0];
+      w[0] = w0;
+      w[1] = w1;
+      w[2] = w2;
+      w[3] = w3;
 
      psum_in = expected_out;
     //Prob 2
