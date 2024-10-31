@@ -10,7 +10,7 @@ module mac_wrapper (
         .w2,
         .x3, 
         .w3,
-        .c,
+        .psum_in,
 	.out
 ); 
 

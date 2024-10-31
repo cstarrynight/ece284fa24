@@ -136,7 +136,7 @@ mac_wrapper #(.bw(bw), .psum_bw(psum_bw)) mac_wrapper_instance (
         .w2(w[2]),
         .x3(x[3]), 
         .w3(w[3]),
-        .c(psum_in),
+        .psum_in(psum_in),
 	.out(out)
 ); 
  
