@@ -1,17 +1,17 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
 module mac_wrapper (
-	.clk, 
-        .x0, 
-        .w0,
-        .x1, 
-        .w1,
-        .x2, 
-        .w2,
-        .x3, 
-        .w3,
-        .psum_in,
-	.out
+	clk, 
+        x0, 
+        w0,
+        x1, 
+        w1,
+        x2, 
+        w2,
+        x3, 
+        w3,
+        psum_in,
+	out
 ); 
 
 parameter bw = 4;
