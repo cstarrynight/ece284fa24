@@ -141,20 +141,20 @@ initial begin
 
      w_scan_file = $fscanf(w_file, "%d\n", w_dec);
      x_scan_file = $fscanf(x_file, "%d\n", x_dec);
-     x0 = x_bin(x_dec);
-     w0 = w_bin(w_dec);
+     reg  [bw-1:0] x0 = x_bin(x_dec);
+     reg  [bw-1:0] w0 = w_bin(w_dec);
      w_scan_file = $fscanf(w_file, "%d\n", w_dec);
      x_scan_file = $fscanf(x_file, "%d\n", x_dec);
-     x1 = x_bin(x_dec);
-     w1 = w_bin(w_dec);
+     reg  [bw-1:0] x1 = x_bin(x_dec);
+     reg  [bw-1:0] w1 = w_bin(w_dec);
      w_scan_file = $fscanf(w_file, "%d\n", w_dec);
      x_scan_file = $fscanf(x_file, "%d\n", x_dec);
-     x2 = x_bin(x_dec);
-     w2 = w_bin(w_dec);
+     reg  [bw-1:0] x2 = x_bin(x_dec);
+     reg  [bw-1:0] w2 = w_bin(w_dec);
      w_scan_file = $fscanf(w_file, "%d\n", w_dec);
      x_scan_file = $fscanf(x_file, "%d\n", x_dec);
-     x3 = x_bin(x_dec);
-     w0 = w_bin(w_dec);          
+     reg  [bw-1:0] x3 = x_bin(x_dec);
+     reg  [bw-1:0] w0 = w_bin(w_dec);          
 
      reg [3:0]  x [3:0];
       x[0] = x0;
