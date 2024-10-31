@@ -201,9 +201,9 @@ initial begin
     //  a = x_bin(x_dec); // unsigned number
     //  b = w_bin(w_dec); // signed number
     //  c = expected_out;
-     for (j=0; j<4; j=j+1) begin
-      expected_out = mac_predicted(x[i], w[i], psum_in);
-     end
+
+    expected_out = mac_predicted(x[0], x[1], x[2], x[3], w[0], w[1], w[2], w[3], psum_in);
+
 
   end
 
