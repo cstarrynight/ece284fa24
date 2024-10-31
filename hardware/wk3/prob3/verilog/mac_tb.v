@@ -30,12 +30,12 @@ reg  [bw-1:0] x0;
 reg  [bw-1:0] x1;
 reg  [bw-1:0] x2;
 reg  [bw-1:0] x3;
-reg  [bw-1:0] x4;
+
 reg  [bw-1:0] w0;
 reg  [bw-1:0] w1;
 reg  [bw-1:0] w2;
 reg  [bw-1:0] w3;
-reg  [bw-1:0] w4;
+
 
 reg [3:0]  w [3:0];
 reg [3:0]  x [3:0];
@@ -149,7 +149,7 @@ initial begin
   $display("-------------------- Computation start --------------------");
   
 
-  for (i=0; i<5; i=i+1) begin  // Data lenght is 10 in the data files
+  for (i=0; i<20; i=i+1) begin  // Data lenght is 10 in the data files
 
      #1 clk = 1'b1;
      #1 clk = 1'b0;
