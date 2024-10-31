@@ -6,7 +6,7 @@ module half_adder (out, a, b);
 parameter psum_bw = 16;
 
 //...
-input  unsigned [psum_bw/2:0] a; //activation
+input  signed [psum_bw/2:0] a; //activation
 input  signed [psum_bw/2:0] b; //weight, not bias
 
 output [psum_bw/2:0] out;
