@@ -37,6 +37,9 @@ reg  [bw-1:0] w2;
 reg  [bw-1:0] w3;
 reg  [bw-1:0] w4;
 
+reg [3:0]  w [3:0];
+reg [3:0]  x [3:0];
+
 function [3:0] w_bin ;
   input integer  weight ;
   begin
@@ -167,12 +170,12 @@ initial begin
      x3 = x_bin(x_dec);
      w0 = w_bin(w_dec);          
 
-     reg [3:0]  x [3:0];
+
       x[0] = x0;
       x[1] = x1;
       x[2] = x2;
       x[3] = x3;
-     reg [3:0]  w [3:0];
+
       w[0] = w0;
       w[1] = w1;
       w[2] = w2;
