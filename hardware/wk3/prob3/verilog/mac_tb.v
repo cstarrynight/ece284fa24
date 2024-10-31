@@ -125,6 +125,7 @@ function [psum_bw-1:0] mac_predicted;
   input integer w1;
   input integer w2;
   input integer w3;
+  input integer psum_in;
 
 	mac_predicted = (x0*w0)+(x1*w1)+(x2*w2)+(x3*w3)+psum_in;
 
