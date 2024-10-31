@@ -9,7 +9,7 @@ parameter psum_bw = 9;
 input unsigned  [bw-1:0] a; //activation
 input signed  [bw-1:0] b; //weight, not bias
 input  [bw-1:0] c; //previous value of accumulation register
-output [psum_bw-1:0] out;
+output [8:0] out;
     
 assign out = a*b + c;
 
