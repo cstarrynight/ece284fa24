@@ -46,7 +46,7 @@ wire [psum_bw/2:0] out01, out23;
 mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance0 (
         .a(x0), 
         .b(w0),
-        .c(4`b0),
+        .c(0),
 	.out(out0)
 ); 
 

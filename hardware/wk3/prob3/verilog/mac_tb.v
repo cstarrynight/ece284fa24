@@ -128,14 +128,14 @@ endfunction
 
 mac_wrapper #(.bw(bw), .psum_bw(psum_bw)) mac_wrapper_instance (
 	.clk(clk), 
-        .x0(x[0]), 
-        .w0(w[0]),
-        .x1(x[1]), 
-        .w1(w[1]),
-        .x2(x[2]), 
-        .w2(w[2]),
-        .x3(x[3]), 
-        .w3(w[3]),
+        .x0(x0), 
+        .w0(w0),
+        .x1(x1), 
+        .w1(w1),
+        .x2(x1), 
+        .w2(w1),
+        .x3(x1), 
+        .w3(w1),
         .psum_in(psum_in),
 	.out(out)
 ); 
