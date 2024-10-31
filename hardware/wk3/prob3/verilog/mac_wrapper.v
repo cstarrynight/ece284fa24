@@ -24,15 +24,15 @@ input  [psum_bw-1:0] c;
 input  clk;
 
 
-input  [bw-1:0] x0;
-input  [bw-1:0] x1;
-input  [bw-1:0] x2;
-input  [bw-1:0] x3;
+input  unsigned [bw-1:0] x0;
+input  unsigned [bw-1:0] x1;
+input  unsigned [bw-1:0] x2;
+input  unsigned [bw-1:0] x3;
 
-input  [bw-1:0] w0;
-input  [bw-1:0] w1;
-input  [bw-1:0] w2;
-input  [bw-1:0] w3;
+input  signed [bw-1:0] w0;
+input  signed [bw-1:0] w1;
+input  signed [bw-1:0] w2;
+input  signed [bw-1:0] w3;
 
 input [psum_bw-1:0] psum_in;
 integer j; 
