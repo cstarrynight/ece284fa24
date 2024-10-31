@@ -90,7 +90,7 @@ half_adder #(.psum_bw(psum_bw)) adder_instance3 (
 ); 
 
 full_adder #(.psum_bw(psum_bw)) adder_instance4 (
-        .a(outf), 
+        .a({psum_bw/2`b0,outf}), 
         .b(psum_in),
 	.out(out)
 ); 
