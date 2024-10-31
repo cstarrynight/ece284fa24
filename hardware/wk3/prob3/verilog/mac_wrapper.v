@@ -40,13 +40,7 @@ integer j;
 reg    [bw-1:0] a_q;
 reg    [bw-1:0] b_q;
 reg    [psum_bw-1:0] c_q;
-wire [psum_bw-1:0] out01;
-wire [psum_bw-1:0] out0;
-wire [psum_bw-1:0] out1;
-wire [psum_bw-1:0] out23;
-wire [psum_bw-1:0] out2;
-wire [psum_bw-1:0] out3;
-wire [psum_bw-1:0] outf;
+wire [psum_bw-1:0] out01, out0, out1, out23, out2, out3, outf;
 
 mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance0 (
         .a(x0), 
