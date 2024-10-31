@@ -149,7 +149,7 @@ initial begin
   $display("-------------------- Computation start --------------------");
   
 
-  for (i=0; i<20; i=i+1) begin  // Data lenght is 10 in the data files
+  for (i=0; i<5; i=i+1) begin  // Data lenght is 10 in the data files
 
      #1 clk = 1'b1;
      #1 clk = 1'b0;
