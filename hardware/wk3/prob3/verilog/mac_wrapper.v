@@ -71,25 +71,25 @@ mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance3 (
 	.out(out3)
 ); 
 
-adder #(.psum_bw(psum_bw)) adder_instance1 (
+half_adder #(.psum_bw(psum_bw)) adder_instance1 (
         .a(out0), 
         .b(out1),
 	.out(out01)
 ); 
 
-adder #(.psum_bw(psum_bw)) adder_instance2 (
+half_adder #(.psum_bw(psum_bw)) adder_instance2 (
         .a(out2), 
         .b(out3),
 	.out(out23)
 ); 
 
-adder #(.psum_bw(psum_bw)) adder_instance3 (
+half_adder #(.psum_bw(psum_bw)) adder_instance3 (
         .a(out01), 
         .b(out23),
 	.out(outf)
 ); 
 
-adder #(.psum_bw(psum_bw)) adder_instance4 (
+full_adder #(.psum_bw(psum_bw)) adder_instance4 (
         .a(outf), 
         .b(psum_in),
 	.out(out)

@@ -132,10 +132,10 @@ mac_wrapper #(.bw(bw), .psum_bw(psum_bw)) mac_wrapper_instance (
         .w0(w0),
         .x1(x1), 
         .w1(w1),
-        .x2(x1), 
-        .w2(w1),
-        .x3(x1), 
-        .w3(w1),
+        .x2(x2), 
+        .w2(w2),
+        .x3(x3), 
+        .w3(w3),
         .psum_in(psum_in),
 	.out(out)
 ); 
