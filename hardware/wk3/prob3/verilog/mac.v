@@ -3,7 +3,7 @@
 module mac (out, a, b, c);
 
 parameter bw = 4;
-parameter psum_bw = 16;
+parameter psum_bw = 9;
 
 //...
 input unsigned  [bw-1:0] a; //activation
