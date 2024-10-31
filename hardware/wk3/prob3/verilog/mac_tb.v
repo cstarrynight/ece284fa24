@@ -134,19 +134,39 @@ initial begin
   $display("-------------------- Computation start --------------------");
   
 
-  for (i=0; i<20; i=i+1) begin  // Data lenght is 10 in the data files
+  for (i=0; i<5; i=i+1) begin  // Data lenght is 10 in the data files
 
      #1 clk = 1'b1;
      #1 clk = 1'b0;
 
      w_scan_file = $fscanf(w_file, "%d\n", w_dec);
      x_scan_file = $fscanf(x_file, "%d\n", x_dec);
+     x0 = x_bin(x_dec);
+     w0 = w_bin(w_dec);
+     w_scan_file = $fscanf(w_file, "%d\n", w_dec);
+     x_scan_file = $fscanf(x_file, "%d\n", x_dec);
+     x1 = x_bin(x_dec);
+     w1 = w_bin(w_dec);
+     w_scan_file = $fscanf(w_file, "%d\n", w_dec);
+     x_scan_file = $fscanf(x_file, "%d\n", x_dec);
+     x2 = x_bin(x_dec);
+     w2 = w_bin(w_dec);
+     w_scan_file = $fscanf(w_file, "%d\n", w_dec);
+     x_scan_file = $fscanf(x_file, "%d\n", x_dec);
+     x3 = x_bin(x_dec);
+     w0 = w_bin(w_dec);          
 
-     a = x_bin(x_dec); // unsigned number
-     b = w_bin(w_dec); // signed number
-     c = expected_out;
+     reg x[3:0] = {x0,x1,x2,x3};
+     reg w[3:0] = {w0,w1,w2,w3};
 
-     expected_out = mac_predicted(a, b, c);
+     psum_in = expected_out;
+    //Prob 2
+    //  a = x_bin(x_dec); // unsigned number
+    //  b = w_bin(w_dec); // signed number
+    //  c = expected_out;
+     for (i=0; i<4; i=i+1) begin
+      expected_out = mac_predicted(x[i], w[i], psum_in);
+     end
 
   end
 
