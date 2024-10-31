@@ -89,7 +89,7 @@ function [3:0] x_bin ;
     else 
         x_bin[1] = 0;
 
-    if (x>=0) 
+    if (x>=1) 
         x_bin[0] = 1;
     else 
         x_bin[0] = 0;
