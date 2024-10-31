@@ -60,28 +60,39 @@ mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance0 (
 mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance1 (
         .a(x1), 
         .b(w1),
-        .c(out0),
+        .c(0),
 	.out(out1)
 ); 
 
 mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance2 (
         .a(x2), 
         .b(w2),
-        .c(out1),
+        .c(0),
 	.out(out2)
 ); 
 
 mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance3 (
         .a(x3), 
         .b(w3),
-        .c(out2),
+        .c(0),
 	.out(out3)
 ); 
 
-mac #(.bw(bw), .psum_bw(psum_bw)) mac_instance4 (
-        .a(1), 
+adder #(.bw(bw), .psum_bw(psum_bw)) adder_instance1 (
+        .a(out0), 
+        .b(out1),
+	.out(out0)
+); 
+
+adder #(.bw(bw), .psum_bw(psum_bw)) adder_instance2 (
+        .a(out2), 
         .b(out3),
-        .c(psum_in),
+	.out(out1)
+); 
+
+adder #(.bw(bw), .psum_bw(psum_bw)) adder_instance3 (
+        .a(out0), 
+        .b(out1),
 	.out(out)
 ); 
 
