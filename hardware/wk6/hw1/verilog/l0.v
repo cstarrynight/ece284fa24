@@ -20,8 +20,8 @@ module l0 (clk, in, out, rd, wr, o_full, reset, o_ready);
   
   genvar i;
 
-  assign o_ready = ?? ;
-  assign o_full  = ?? ;
+  assign o_ready = empty ;
+  assign o_full  = full ;
 
 
   for (i=0; i<row ; i=i+1) begin : row_num
@@ -29,12 +29,12 @@ module l0 (clk, in, out, rd, wr, o_full, reset, o_ready);
 	 .rd_clk(clk),
 	 .wr_clk(clk),
 	 .rd(rd_en[i]),
-	 .wr(...),
-         .o_empty(...),
-         .o_full(...),
-	 .in(...),
-	 .out(...),
-         .reset(reset));
+	 .wr(wr),
+    .o_empty(empty),
+    .o_full(full),
+	 .in(in),
+	 .out(out),
+    .reset(reset));
   end
 
 
@@ -42,17 +42,17 @@ module l0 (clk, in, out, rd, wr, o_full, reset, o_ready);
    if (reset) begin
       rd_en <= 8'b00000000;
    end
-   else
+   // else
 
-      /////////////// version1: read all row at a time ////////////////
-      ...
-      ///////////////////////////////////////////////////////
+   //    // /////////////// version1: read all row at a time ////////////////
+   //    // ...
+   //    // ///////////////////////////////////////////////////////
 
+   //    $display("else tbd")
 
-
-      //////////////// version2: read 1 row at a time /////////////////
-      ...
-      ///////////////////////////////////////////////////////
-    end
+   //    // //////////////// version2: read 1 row at a time /////////////////
+   //    // ...
+   //    // ///////////////////////////////////////////////////////
+   end
 
 endmodule

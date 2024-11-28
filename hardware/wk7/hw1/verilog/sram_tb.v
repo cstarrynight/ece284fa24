@@ -1,6 +1,6 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-
+`include "sram_32b_w2048.v"
 `timescale 1 ns/1 ps
 
 module sram_tb;
