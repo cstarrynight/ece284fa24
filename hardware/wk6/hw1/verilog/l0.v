@@ -20,8 +20,8 @@ module l0 (clk, in, out, rd, wr, o_full, reset, o_ready);
   
   genvar i;
 
-  assign o_ready = empty ;
-  assign o_full  = full ;
+  assign o_ready = !o_full;
+  assign o_full  = (full>0) ? 1:0 ;
 
 
   for (i=0; i<row ; i=i+1) begin : row_num
