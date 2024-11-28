@@ -28,10 +28,10 @@ module l0 (clk, in, out, rd, wr, o_full, reset, o_ready);
       fifo_depth64 #(.bw(bw)) fifo_instance (
 	 .rd_clk(clk),
 	 .wr_clk(clk),
-	 .rd(rd_en[row-i-1]),
+	 .rd(rd_en[i]),
 	 .wr(wr),
-    .o_empty(empty[row-i-1]),
-    .o_full(full[row-i-1]),
+    .o_empty(empty[i]),
+    .o_full(full[i]),
 	 .in(in[bw*(i+1)-1:bw*i]),
 	 .out(out[bw*(i+1)-1:bw*i]),
     .reset(reset));
