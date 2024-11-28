@@ -42,17 +42,17 @@ module l0 (clk, in, out, rd, wr, o_full, reset, o_ready);
    if (reset) begin
       rd_en <= 8'b00000000;
    end
-   // else
+   else
 
-   //    // /////////////// version1: read all row at a time ////////////////
-   //    // ...
-   //    // ///////////////////////////////////////////////////////
+      // /////////////// version1: read all row at a time ////////////////
+      //rd_en <= 8'b{rd} //rd decides for all 8 rows
+      // ///////////////////////////////////////////////////////
 
-   //    $display("else tbd")
+      $display("else tbd")
 
-   //    // //////////////// version2: read 1 row at a time /////////////////
-   //    // ...
-   //    // ///////////////////////////////////////////////////////
+      // //////////////// version2: read 1 row at a time /////////////////
+      rd_en <= {rd_en[row-2:0],rd} //shift left and add rd for whether to rd next row or not
+      // ///////////////////////////////////////////////////////
    end
 
 endmodule
