@@ -45,7 +45,7 @@ module ofifo (clk, in, out, rd, wr, o_full, reset, o_ready, o_valid);
    end
    else
       
-     rd_en <= 8'b{rd}; //Read out all columns at a time
+     rd_en <= {8{rd}}; //Read out all columns at a time
  
   end
 
