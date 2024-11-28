@@ -30,10 +30,10 @@ module l0 (clk, in, out, rd, wr, o_full, reset, o_ready);
 	 .wr_clk(clk),
 	 .rd(rd_en[i]),
 	 .wr(wr),
-    .o_empty(empty),
-    .o_full(full),
-	 .in(in),
-	 .out(out),
+    .o_empty(empty[i]),
+    .o_full(full[i]),
+	 .in(in[bw*i:bw*(i-1)]),
+	 .out(out[bw*i:bw*(i-1)]),
     .reset(reset));
   end
 
