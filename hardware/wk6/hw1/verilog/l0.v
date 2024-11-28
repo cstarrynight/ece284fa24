@@ -20,7 +20,7 @@ module l0 (clk, in, out, rd, wr, o_full, reset, o_ready);
   
   genvar i;
 
-  assign o_ready = empty ;
+  assign o_ready = ~empty ;
   assign o_full  = full ;
 
 
