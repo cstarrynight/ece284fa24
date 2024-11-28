@@ -23,7 +23,7 @@ module ofifo (clk, in, out, rd, wr, o_full, reset, o_ready, o_valid);
 
   assign o_ready = empty ;
   assign o_full  = full ;
-  assign o_valid = ?? ;
+  assign o_valid =  full[col-1];
 
   for (i=0; i<col ; i=i+1) begin : col_num
       fifo_depth64 #(.bw(bw)) fifo_instance (
@@ -34,7 +34,7 @@ module ofifo (clk, in, out, rd, wr, o_full, reset, o_ready, o_valid);
          .o_empty(empty[i]),
          .o_full(full[i]),
 	 .in(in[bw*(i+1)-1:bw*i]),
-	 .out(in[bw*(i+1)-1:bw*i]),
+	 .out(out[bw*(i+1)-1:bw*i]),
          .reset(reset));
   end
 
@@ -45,7 +45,7 @@ module ofifo (clk, in, out, rd, wr, o_full, reset, o_ready, o_valid);
    end
    else
       
-     rd_en <= 8'b{rd} //Read out all columns at a time
+     rd_en <= 8'b{rd}; //Read out all columns at a time
  
   end
 
