@@ -10,7 +10,7 @@ module ofifo (clk, in, out, rd, wr, o_full, reset, o_ready, o_valid);
   input  rd;
   input  reset;
   input  [col*bw-1:0] in;
-  output [bol*bw-1:0] out;
+  output [col*bw-1:0] out;
   output o_full;
   output o_ready;
   output o_valid;
