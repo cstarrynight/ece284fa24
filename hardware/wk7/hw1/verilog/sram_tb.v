@@ -38,7 +38,7 @@ initial begin
   $dumpfile("sram_tb.vcd");
   $dumpvars(0,sram_tb);
 
-  x_file = $fopen("activation.txt", "r");
+  x_file = $fopen("my_activation.txt", "r");
 
   // Following three lines are to remove the first three comment lines of the file
   x_scan_file = $fscanf(x_file,"%s", captured_data);
